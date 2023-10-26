@@ -1,11 +1,17 @@
 #include<iostream>
-#include<bits/stdc++.h>
+//#include<bits/stdc++.h>
 #include<vector>
 #include<string>
 using namespace std ;
 static bool bears(int n);
 int main (){
 int n;
+cout<<"welcome in our game."<<endl;
+cout <<"our game aims to reach 42 by doing some operations"<<endl;
+cout<< "1. If n is even, then you may give back exactly n / 2 bears.\n"<<
+"2. If n is divisible by 3 or 4, then you may multiply the last two digits of n and give back this many bears.\n" <<"(By the way, the last digit of n is n % 10, and the next-to-last digit is ((n % 100) / 10).\n"<<
+"3. If n is divisible by 5, then you may give back exactly 42 bears.\n";
+cout<<"kindly, enter the starting number\n";
 cin>>n;
 bool ck=bears(n);
 if(!ck){
@@ -37,5 +43,5 @@ static bool bears(int n){
         bears(n);
         n+=42;
      }
-     return ck;
+ return ck;
 }
